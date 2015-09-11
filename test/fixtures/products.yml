@@ -11,3 +11,12 @@ two:
   description: MyText
   image_url: MyString
   price: 9.99
+#START:ruby
+
+ruby: 
+  title:       TestingGrocery
+  description: 
+   This well known test case will be used  for testing the credibility of the applications.
+  price:       49.50
+  image_url:   ruby.png 
+#END:ruby
