@@ -39,6 +39,7 @@ class OrdersController < ApplicationController
         Cart.destroy(session[:cart_id])
         session[:cart_id] = nil
         OrderNotifier.received(@order).deliver
+        OrderNotifier.admin_mailer(@order).deliver
         format.html { redirect_to store_url, notice: 'Order has been received. Thank you for shopping at LAZYMART.CA' }
         format.json { render :show, status: :created, location: @order }
       else

@@ -21,4 +21,10 @@ class OrderNotifier < ApplicationMailer
 
     mail to: order.email, subject: 'Your order shipped'
   end
+
+  def admin_mailer(order)
+    @order = order
+    mail to: 'mail2kibum@me.com', subject: 'Customer order confirmation'
+  end
+
 end
